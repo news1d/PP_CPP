@@ -39,7 +39,7 @@ int main() {
             int start = threadID * chunkSize;       // Номер потока * размер участка проверки (усл. 0 * 1000000 = 0)
             int end = start + chunkSize;            // Начало участка проверки + размер участка (усл. 0 + 1000000 = 1000000)
 
-            // Ищем минимальное полажительное число из дипазаона
+            // Ищем минимальное положительное число из дипазаона
             for (int i = start; i < end; i++) {
                 if (numbers[i] > 0 && numbers[i] < minNum[threadID]) {
                     minNum[threadID] = numbers[i];
